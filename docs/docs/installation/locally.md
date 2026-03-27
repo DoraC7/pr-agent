@@ -1,7 +1,7 @@
 To run PR-Agent locally, you first need to acquire two keys:
 
-1. An OpenAI key from [here](https://platform.openai.com/api-keys){:target="_blank"}, with access to GPT-4 and o4-mini (or a key for other [language models](../usage-guide/changing_a_model.md), if you prefer).
-2. A personal access token from your Git platform (GitHub, GitLab, BitBucket, Gitea) with repo scope. GitHub token, for example, can be issued from [here](https://github.com/settings/tokens){:target="_blank"}
+1. An OpenAI API key from [here](https://platform.openai.com/api-keys){:target="_blank"}, with access to GPT-4 and o4-mini (or another [language models](../usage-guide/changing_a_model.md), if you prefer).
+2. A personal access token from your Git platform (GitHub, GitLab, Bitbucket, Gitea) with repo scope. For example, you can create a GitHub token [here](https://github.com/settings/tokens){:target="_blank"}
 
 ## Using Docker image
 
@@ -34,7 +34,7 @@ To invoke a tool (for example `review`), you can run PR-Agent directly from the 
     -e GITLAB.URL=<your gitlab instance url>
     ```
 
-- For BitBucket:
+- For Bitbucket:
 
     ```bash
     docker run --rm -it -e CONFIG.GIT_PROVIDER=bitbucket -e OPENAI.KEY=$OPENAI_API_KEY -e BITBUCKET.BEARER_TOKEN=$BITBUCKET_BEARER_TOKEN codiumai/pr-agent:latest --pr_url=<pr_url> review
